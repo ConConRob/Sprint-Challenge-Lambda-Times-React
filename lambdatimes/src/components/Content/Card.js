@@ -46,7 +46,7 @@ const Card = props => {
       <h2>{card.headline}</h2>
       <div className="author">
         <div className="img-container">
-          <img src={card.img} />
+          <img src={card.img} alt={card.headline}/>
         </div>
         <span>By {card.author}</span>
       </div>
