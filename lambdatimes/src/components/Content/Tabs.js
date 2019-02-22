@@ -26,6 +26,18 @@ const StyledTabs = styled.div`
     letter-spacing: 1px;
     font-weight: bold;
   }
+  .logout{
+    margin: 0 5px;
+    padding: 2px 10px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    background: #F8C7CE;
+    cursor: pointer;
+    :hover {
+      text-decoration: underline;
+    }
+  }
 
 `
 const Tabs = props => {
@@ -45,7 +57,7 @@ const Tabs = props => {
             selectedTabHandler={selectedTabHandler} 
           />)
         }
-        <button onClick={logOut}>Logout</button>
+        <div className="logout" onClick={logOut}>Logout</div>
       </div>
     
     </StyledTabs>
