@@ -13,16 +13,25 @@ export default class Carousel extends Component {
   }
 
   leftClick = () => {
-    this.setState(curState => ({currentPos: curState.currentPos-1}))
+    this.setState(curState => {
+      const curPos = curState.currentPos
+      const nextPos = curPos===0? carouselData.length-1: curPos-1;
+      return {
+        currentPos: nextPos,
+      } 
+    })
   }
 
   rightClick = () => {
-    this.setState(curState => ({currentPos: curState.currentPos+1}))
+    this.setState(curState => {
+      const curPos = curState.currentPos
+      const nextPos = curPos===carouselData.length-1? 0: curPos+1;
+      return {
+        currentPos: nextPos,
+      } 
+    })
   }
 
-  // selectedImage = () => {
-  //   return <img src={} style={{display: 'block'}} />
-  // }
   
   render(){
     return (
