@@ -29,14 +29,21 @@ const StyledTabs = styled.div`
 
 `
 const Tabs = props => {
-  const {tabs} = props
+  const {tabs, selectedTab, selectedTabHandler} = props
+  console.log(props)
   return (
     <StyledTabs>
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
         {/* map over the tabs provided on your props, create a new Tab component for each one.
             give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/
-          tabs.map((tab, index) => <Tab key={index} tab={tab} />)
+          tabs.map((tab, index) => 
+          <Tab 
+            key={index} 
+            tab={tab}
+            selectedTab={selectedTab}
+            selectedTabHandler={selectedTabHandler} 
+          />)
         }
       </div>
     </StyledTabs>
@@ -46,5 +53,7 @@ const Tabs = props => {
 // Make sure to use PropTypes to validate your types!
 Tabs.propType = {
   tabs: PT.array.isRequired,
+  selectedTab: PT.string.isRequired,
+  selectedTabHandler: PT.func.isRequired,
 }
 export default Tabs;

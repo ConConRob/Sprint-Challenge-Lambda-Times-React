@@ -17,27 +17,26 @@ const StyledCard = styled.div`
     font-family: Didot, serif;
   }
   .author {
-  display: flex;
-  justify-content: none;
-  align-items: center;
-  flex-direction: row;
-  margin-top: 15px;
-}
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 15px;
+  }
   .author .img-container {
-  padding-right: 10px;
-  border-right: 1px solid lightgrey;
-  height: 40px;
-}
+    padding-right: 10px;
+    border-right: 1px solid lightgrey;
+    height: 40px;
+  }
   .author .img-container img {
-  width: 40px;
-}
+    width: 40px;
+  }
   .author span {
-  padding-left: 10px;
-  font-size: 12px;
-  letter-spacing: 1px;
-  font-weight: bold;
-}
-
+    padding-left: 10px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
 ` 
 
 const Card = props => {
