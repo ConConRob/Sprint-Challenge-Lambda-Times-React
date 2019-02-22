@@ -6,8 +6,9 @@ const StyledTab = styled.div`
   justify-content: none;
   align-items: center;
   flex-direction: row;
-  color: #fff;
-  background-color: #333;
+  color: ${props => props.tab===props.selectedTab ? "#333" : '#fff'};
+  background: ${props => props.tab===props.selectedTab ? "#fff" : '#333'};
+  border: ${props => props.tab===props.selectedTab ? "2px solid #333" : 'none'};
   margin: 0 5px;
   padding: 2px 10px;
   font-size: 12px;
@@ -17,22 +18,18 @@ const StyledTab = styled.div`
   :hover {
     text-decoration: underline;
   }
-  .active-tab {
-  background-color: #fff;
-  color: #333;
-  border: 2px solid #333;
-  }
 `
+
 const Tab = props => {
   const {tab, selectedTab, selectedTabHandler} = props
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
-      console.log(selectedTabHandler)
   return (
     
     <StyledTab
-      className={''}
+      tab={tab}
+      selectedTab={selectedTab}
       onClick={() => {
        selectedTabHandler(tab)
       }}

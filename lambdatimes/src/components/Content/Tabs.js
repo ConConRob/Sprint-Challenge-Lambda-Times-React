@@ -30,7 +30,6 @@ const StyledTabs = styled.div`
 `
 const Tabs = props => {
   const {tabs, selectedTab, selectedTabHandler} = props
-  console.log(props)
   return (
     <StyledTabs>
       <div className="topics">
