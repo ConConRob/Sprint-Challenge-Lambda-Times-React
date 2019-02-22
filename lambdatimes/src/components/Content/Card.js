@@ -12,20 +12,46 @@ const StyledCard = styled.div`
   width: 380px;
   margin-bottom: 16px;
   padding: 24px;
+  h2{
+    font-size: 25px;
+    font-family: Didot, serif;
+  }
+  .author {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 15px;
+}
+  .author .img-container {
+  padding-right: 10px;
+  border-right: 1px solid lightgrey;
+  height: 40px;
+}
+  .author .img-container img {
+  width: 40px;
+}
+  .author span {
+  padding-left: 10px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
 ` 
 
 const Card = props => {
   const {card} = props
   return (
-    <div className="card">
-      <div className="headline">{card.headline}</div>
+    <StyledCard>
+      <h2>{card.headline}</h2>
       <div className="author">
         <div className="img-container">
           <img src={card.img} />
         </div>
         <span>By {card.author}</span>
       </div>
-    </div>
+    </StyledCard>
   );
 };
 
