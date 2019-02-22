@@ -29,7 +29,8 @@ const StyledTabs = styled.div`
 
 `
 const Tabs = props => {
-  const {tabs, selectedTab, selectedTabHandler} = props
+  const {tabs, selectedTab, selectedTabHandler, logOut} = props;
+  
   return (
     <StyledTabs>
       <div className="topics">
@@ -44,7 +45,9 @@ const Tabs = props => {
             selectedTabHandler={selectedTabHandler} 
           />)
         }
+        <button onClick={logOut}>Logout</button>
       </div>
+    
     </StyledTabs>
   );
 };

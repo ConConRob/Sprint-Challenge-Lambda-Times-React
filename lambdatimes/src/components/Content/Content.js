@@ -56,12 +56,14 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Carousel />
+        
         <Tabs 
           tabs={this.state.tabs} 
           selectedTab={this.state.selected}
           selectedTabHandler={this.changeSelected}
+          logOut={this.props.logOut}
         />
+        <Carousel />
         <Cards cards={this.filterCards()} />
       </div>
     );
