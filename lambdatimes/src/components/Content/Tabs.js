@@ -1,4 +1,6 @@
 import React from 'react';
+import PT from 'prop-types';
+import styled from 'styled-components';
 import Tab from './Tab';
 const Tabs = props => {
   return (
